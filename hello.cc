@@ -1,6 +1,6 @@
 #include <node.h>
 
-namespce demo {
+namespace demo {
   using v8::FunctionCallbackInfo;
   using v8::Isolate;
   using v8::Local;
@@ -10,7 +10,7 @@ namespce demo {
 
   void Method(const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
-    args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"))
+    args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
   }
 
   void init(Local<Object> exports) {
